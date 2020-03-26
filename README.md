@@ -132,3 +132,6 @@ mMarker.addListener('click', () => {
 
 ![Ionic HMS Map web](demo/web.gif)
 
+
+You can have more infromation from the official documentation of [Huawei Map Kit - JS API](https://developer.huawei.com/consumer/en/doc/development/HMS-Guides/hms-map-js-about-the-service) and you can integrate it in any JS based project.
+
