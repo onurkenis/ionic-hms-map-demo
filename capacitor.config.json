@@ -1,0 +1,8 @@
+{
+  "appId": "com.onurkenis.ionichmsmapdemo",
+  "appName": "ionic-hms-map-demo",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "www",
+  "cordova": {}
+}
