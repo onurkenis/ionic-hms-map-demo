@@ -3,11 +3,12 @@
 
 <head>
   <meta charset="utf-8" />
-  <title>Ionic App</title>
+  <title>Huawei Map</title>
 
   <base href="/" />
 
-  <meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="viewport"
+    content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
   <meta name="format-detection" content="telephone=no" />
   <meta name="msapplication-tap-highlight" content="no" />
 
@@ -15,8 +16,24 @@
 
   <!-- add to homescreen for ios -->
   <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="HMS Map - JavaScript API" />
+
 </head>
+
+<script>
+  function initMap() {
+    console.log("Map script is initialized");
+  }
+  function loadMapScript() {
+    const apiKey = encodeURIComponent("YOUR_API_KEY");
+    const src = `https://mapapi.cloud.huawei.com/mapjs/v1/api/js?callback=initMap&key=${apiKey}`;
+
+    const mapScript = document.createElement('script');
+    mapScript.setAttribute('src', src);
+    document.head.appendChild(mapScript);
+  }
+  loadMapScript();
+</script>
 
 <body>
   <app-root></app-root>
