@@ -10,7 +10,7 @@ export class HomePage {
   map: any;
   marker: any;
 
-  constructor() {}
+  constructor() { }
 
   showMap() {
     const mapOptions: any = {};
@@ -28,6 +28,20 @@ export class HomePage {
       icon: {
         opacity: 0.5
       }
+    });
+  }
+
+  showInformationWindow() {
+    const marker = this.marker;
+    let infoWindow = new HWMapJsSDK.HWInfoWindow({
+      map: this.map,
+      position: 10,
+      content: 'This is a InfoWindow.',
+      offset: [0, -40],
+    });
+    infoWindow.open(marker);
+    marker.addListener('click', () => {
+      infoWindow.open(marker);
     });
   }
 
