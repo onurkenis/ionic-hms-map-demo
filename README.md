@@ -1,9 +1,7 @@
 # Ionic HMS Map Demo
-An Ionic sample which integrates JavaScript API of HMS Map Kit.
-
+An Ionic sample integrated with HMS Map Kit JavaScript Api.
 
 ![Ionic HMS Map mobile](demo/mobile.gif)
-
 
 ## Running the application
 
@@ -30,12 +28,20 @@ document.head.appendChild(mapScript);
 
 ### Run Locally in a Web Browser
 
-Add your HMS API Key and run following command from your app directory
+1. Add your HMS API Key
+
+2. Install dependencies
+
+```sh
+cd ionic-hms-map-demo
+npm install
+```
+
+3. Run following command and you can visit http://localhost:8100/ in your web browser to see the app in action
 
 ```sh
 ionic serve
 ```
-You can visit http://localhost:8100/ in your web browser to see the app in action
 
 ### Running on Android
 
@@ -82,7 +88,7 @@ If you are having issues, you can follow [getting started.](https://capacitor.io
 <div id="map"></div> 
 ```
 
-3. Initialize the map. The following sample code is to create a map with Paris as the center and a zoom level of 8
+3. Initialize the map. The following sample code is to create a map with Paris as the center and a zoom level of 8:
 
 ```js
 function initMap() { 
@@ -123,9 +129,6 @@ mMarker.addListener('click', () => {
     infoWindow.open(mMarker); 
 }); 
 ```
-
-You can have more infromation from the official documentation of [Huawei Map Kit - JS API](https://developer.huawei.com/consumer/en/doc/development/HMS-Guides/hms-map-js-about-the-service) and you can integrate it in any JS based project.
-
 
 ![Ionic HMS Map web](demo/web.gif)
 
